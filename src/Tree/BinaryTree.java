@@ -151,9 +151,9 @@ public class BinaryTree {
         TreeNode sixth = new TreeNode(6);
         TreeNode seventh = new TreeNode(7);
 
-        root = fifth;
-        first.left = second;
-        first.right = third;
+        root = first;
+        root.left = second;
+        root.right = third;
         second.left = fourth;
         second.right = fifth;
         third.left = sixth;
@@ -162,6 +162,8 @@ public class BinaryTree {
 
     }
     public static void main(String[] args) {
-
+        BinaryTree bt = new BinaryTree();
+        bt.createBinaryTree();
+        bt.levelOrder();
     }
 }

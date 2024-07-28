@@ -24,7 +24,7 @@ public class TwoSum {
     }
 
 
-    //Two pointer approach
+    //Two pointer approach (if sorted)
     public static int[] twoSumII(int[] arr, int target){
         Arrays.sort(arr);
         int left = 0;
@@ -35,7 +35,7 @@ public class TwoSum {
             sum = arr[left] + arr[right];
             if(sum == target){
                 result[0] = arr[left];
-                result[1] = arr[right];     //you can search for index if you want O(n)
+                result[1] = arr[right];     //you can use left and right if you want index not value
                 return result;
             } else if (sum < target) {
                 left++;
